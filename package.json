@@ -1,0 +1,20 @@
+{
+  "name": "projetofaculdadeafirmativo",
+  "version": "1.0.0",
+  "description": "Esse projeto está sendo desenvolvido como trabalho para a disciplina de Tópicos Especiais em Sistemas, realizada em grupo, tem como objetivo criar uma aplicação de tema livre, o tema escolhido por nosso grupo foi uma faculdade.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.1.2",
+    "prisma": "^4.14.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.14.0"
+  }
+}

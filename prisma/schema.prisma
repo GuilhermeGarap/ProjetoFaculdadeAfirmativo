@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+ model curso{
+  id_curso Int @id @default(autoincrement())
+  nome_curso String @db.VarChar(255) @unique
+  duracao_curso Float
+  turmas turma[]
+  alunos aluno[]
+ }
+
+ model turma{
+  id_turma Int @id @default(autoincrement())
+  turno_turma String @db.VarChar(255)
+  perido_turma String @db.VarChar(255)
+  alunos aluno[]
+
+  curso_id Int
+  cursos curso? @relation(fields: [curso_id], references: [id_curso])
+ }
+
+ model aluno{
+  id_aluno Int @id @default(autoincrement())
+  cpf_aluno String @db.Char(14)
+
+  turma_id Int
+  turmas turma? @relation(fields: [turma_id], references: [id_turma])
+
+  curso_id Int
+  cursos curso? @relation(fields: [curso_id], references: [id_curso])
+
+  chamadas chamada[]
+ }
+
+ model chamada{
+  id_chamada Int @id @default(autoincrement())
+
+  aluno_id Int
+  alunos aluno? @relation(fields: [aluno_id], references: [id_aluno])
+
+  chamada_presenca Boolean
+  chamada_data DateTime
+  chamada_justificativa String @db.VarChar(300)
+
+  
+ }
+
+
