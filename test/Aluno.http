@@ -1,0 +1,47 @@
+### Criar Aluno
+POST http://localhost:3000/alunos/criaraluno
+Content-Type: application/json
+
+{
+    "cpf_aluno" : "987.654.321-10",
+    "turma_id" : 1,
+    "curso_id" : 1
+}
+
+### Modificar Aluno
+PUT http://localhost:3000/alunos/modificaraluno
+Content-Type: application/json
+
+{
+    //ID do aluno que deseja modificar
+    "id_aluno" : 2,
+  
+    //Informações que deseja modificar, comente e retire a vírgula caso queira mudar apenas uma delas.
+    "cpf_aluno" : "123-456-789-10",
+    "id_turma" : 1,
+    "id_curso" : 4
+}
+
+### Deletar Aluno
+DELETE http://localhost:3000/alunos/excluiraluno
+Content-Type: application/json
+
+{
+    //ID do aluno que deseja excluir
+    "id_aluno": 1
+  
+}
+
+### Listar Cursos
+GET http://localhost:3000/alunos/listaraluno
+Content-Type: application/json
+
+{
+    //Informações da turma/turmas que deseja buscar, comente e retire a vírgula caso queira usar apenas uma delas.
+    "id_aluno": 1,
+    "cpf_aluno": 123-456-789-10,
+    "turma_id": 1,
+    "curso_id": 4
+}
+
+

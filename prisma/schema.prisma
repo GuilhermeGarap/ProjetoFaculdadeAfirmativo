@@ -20,8 +20,7 @@ datasource db {
 
  model turma{
   id_turma Int @id @default(autoincrement())
-  turno_turma String @db.VarChar(255)
-  perido_turma String @db.VarChar(255)
+  turno_turma String @db.VarChar(256)
   alunos aluno[]
 
   curso_id Int
@@ -48,7 +47,7 @@ datasource db {
   alunos aluno? @relation(fields: [aluno_id], references: [id_aluno])
 
   chamada_presenca Boolean
-  chamada_data DateTime
+  chamada_data String @db.Char(10)
   chamada_justificativa String @db.VarChar(300)
 
   

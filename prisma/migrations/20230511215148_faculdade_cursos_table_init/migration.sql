@@ -21,7 +21,7 @@ CREATE TABLE `curso` (
 CREATE TABLE `turma` (
     `id_turma` INTEGER NOT NULL AUTO_INCREMENT,
     `turno_turma` VARCHAR(255) NOT NULL,
-    `perido_turma` VARCHAR(255) NOT NULL,
+    `periodo_turma` VARCHAR(255) NOT NULL,
     `curso_id` INTEGER NOT NULL,
 
     PRIMARY KEY (`id_turma`)

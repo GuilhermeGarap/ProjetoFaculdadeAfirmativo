@@ -1,0 +1,42 @@
+### Criar Turma
+POST http://localhost:3000/turmas/criarturma
+Content-Type: application/json
+
+{
+    "turno_turma" : "Manhã",
+    "curso_id" : 1
+}
+
+### Modificar Turma
+PUT http://localhost:3000/turmas/modificarturma
+Content-Type: application/json
+
+{
+    //ID da turma que deseja modificar
+    "id_turma" : 1,
+  
+    //Informações que deseja modificar, comente e retire a vírgula caso queira mudar apenas uma delas.,
+    "turno_turma" : "Noite",
+    "id_curso" : 1
+}
+
+### Deletar Turma
+DELETE http://localhost:3000/turmas/excluirturma
+Content-Type: application/json
+
+{
+    //ID da turma que deseja excluir
+    "id_turma": 2
+  
+}
+
+### Listar Cursos
+GET http://localhost:3000/turmas/listarturma
+Content-Type: application/json
+
+{
+    //Informações da turma/turmas que deseja buscar, comente e retire a vírgula caso queira usar apenas uma delas.
+    "id_turma" : 1,
+    "turno_turma" : "Noite",
+    "curso_id:" : 1
+}

@@ -1,0 +1,42 @@
+### Criar Curso
+POST http://localhost:3000/cursos/criarcurso
+Content-Type: application/json
+
+{
+    "nome_curso" : "Medicina",
+    "duracao_curso" : 5
+}
+
+### Modificar Curso
+PUT http://localhost:3000/cursos/modificarcurso
+Content-Type: application/json
+
+{
+    //ID do curso que deseja modificar
+    "id_curso": 2,
+  
+    //Informações que deseja modificar, comente e retire a vírgula caso queira mudar apenas uma delas.
+    "nome_curso": "TI",
+    "duracao_curso": 4
+}
+
+### Deletar Curso
+DELETE http://localhost:3000/cursos/excluircurso
+Content-Type: application/json
+
+{
+    //ID do curso que deseja excluir
+    "id_curso": 3
+  
+}
+
+### Listar Cursos
+GET http://localhost:3000/cursos/listarcurso
+Content-Type: application/json
+
+{
+    //Informações do curso/cursos que deseja buscar, comente e retire a vírgula caso queira usar apenas uma delas.
+    "id_curso": 1,
+    "nome_curso": "TI",
+    "duracao_curso": 4
+}

@@ -4,7 +4,8 @@
   "description": "Esse projeto está sendo desenvolvido como trabalho para a disciplina de Tópicos Especiais em Sistemas, realizada em grupo, tem como objetivo criar uma aplicação de tema livre, o tema escolhido por nosso grupo foi uma faculdade.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsx watch src/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@prisma/client": "^4.14.0"
+    "@prisma/client": "^4.14.0",
+    "expres": "^0.0.5",
+    "express": "^4.18.2"
   }
 }

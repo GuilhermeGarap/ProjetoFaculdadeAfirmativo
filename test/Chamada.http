@@ -1,0 +1,49 @@
+### Criar Chamada
+POST http://localhost:3000/chamadas/criarchamada
+Content-Type: application/json
+
+{ 
+    "id_aluno": 3,
+    //Presente = true, Falta = false
+    "chamada_presenca": false, 
+    "chamada_data": "14/05/2023", 
+    "chamada_justificativa": "Doente"
+}
+
+### Modificar Chamada
+PUT http://localhost:3000/chamadas/modificarchamada
+Content-Type: application/json
+
+{
+    //ID da chamada que deseja modificar
+    "id_chamada": 1,
+  
+    //Informações que deseja modificar, comente e retire a vírgula caso queira mudar apenas uma delas.
+    "aluno_id": 1, 
+    "chamada_presenca": true, 
+    "chamada_data": "10/05/2023", 
+    "chamada_justificativa": "Nenhuma"
+}
+
+### Deletar Chamada
+DELETE http://localhost:3000/chamadas/excluirchamada
+Content-Type: application/json
+
+{
+    //ID da chamada que deseja excluir
+    "id_chamada": 1
+  
+}
+
+### Listar Cursos
+GET http://localhost:3000/chamadas/listarchamada
+Content-Type: application/json
+
+{
+    //Informações da chamada que deseja buscar, comente e retire a vírgula caso queira usar apenas uma delas.
+    "id_chamada": 2,
+    "id_aluno": 3,
+    "chamada_data": "14/05/2023"
+}
+
+
